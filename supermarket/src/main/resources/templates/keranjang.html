@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Keranjang</title>
+</head>
+<body>
+    <h1>Keranjang Belanja</h1>
+    <table>
+        <tr>
+            <th>Nama</th>
+            <th>Jumlah</th>
+            <th>Harga</th>
+        </tr>
+        <tr th:each="item : ${keranjang}">
+            <td th:text="${item.nama}">Nama</td>
+            <td th:text="${item.jumlah}">Jumlah</td>
+            <td th:text="${item.harga}">Harga</td>
+        </tr>
+    </table>
+    <p>Total: <span th:text="${total}">0</span></p>
+</body>
+</html>
